@@ -1,0 +1,105 @@
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Contact · Wanton Group</div>
+    <h1>Start a conversation with us.</h1>
+    <p class="lead">Whether you want to work with Wanton Group, explore a hospitality partnership, enquire about our products or connect with one of our businesses, we'd like to hear from you.</p>
+  </div>
+</section>
+
+<section class="contact-whatsapp">
+  <div class="wrap">
+    <h2>The fastest way to reach us</h2>
+    <p>Message us directly on WhatsApp for a quick response.</p>
+    <div class="hero-ctas">
+      <a href="{{wa:general}}" class="btn btn-primary" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a href="tel:+919867939177" class="btn btn-ghost btn-ghost--light">Call +91 98679 39177</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact-cards">
+  <div class="wrap">
+    <div class="cc-grid">
+      <div class="cc-card reveal">
+        <h2>Wanton Group</h2>
+        <p>Shams Palace<br>98 Hill Road, Bandra West<br>Mumbai – 400 050</p>
+        <a href="mailto:info@wantongroup.com">info@wantongroup.com</a>
+        <a href="tel:+919867939177">+91 98679 39177</a>
+        <span class="cc-note">Landline: 022-2651 6314 / 2642 6085</span>
+        <a href="{{wa:general}}" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a href="{{map:group}}" target="_blank" rel="noopener">View on map</a>
+      </div>
+      <div class="cc-card reveal">
+        <h2>Wanton House</h2>
+        <p>Shop No. 4, Shams Palace<br>98 Hill Road, Bandra West<br>Mumbai – 400 050</p>
+        <a href="mailto:bandra@wantongroup.com">bandra@wantongroup.com</a>
+        <a href="{{wa:restaurant}}" target="_blank" rel="noopener">Reserve on WhatsApp</a>
+        <a href="{{map:restaurant}}" target="_blank" rel="noopener">View on map</a>
+      </div>
+      <div class="cc-card reveal">
+        <h2>Hotel Wanton House</h2>
+        <p>Plot No. 14, Sector 26/A<br>Palm Beach Road, Kopri Car Bazar Zone<br>Vashi, Navi Mumbai – 400 705</p>
+        <a href="mailto:hotelwantonhouse@wantongroup.com">hotelwantonhouse@wantongroup.com</a>
+        <a href="{{wa:hotel}}" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a href="{{map:hotel}}" target="_blank" rel="noopener">View on map</a>
+      </div>
+      <div class="cc-card reveal">
+        <h2>Ajuni Luxe</h2>
+        <p>Shop No. 7, G-10, Palai Commercial Complex<br>Senapati Bapat Marg (Tulsi Pipe Road)<br>Dadar (West), Mumbai – 400 028</p>
+        <a href="{{wa:ajuni}}" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a href="https://www.instagram.com/ajuniluxe/" target="_blank" rel="noopener">@ajuniluxe on Instagram</a>
+        <a href="{{map:ajuni}}" target="_blank" rel="noopener">View on map</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">&#10022;</div>
+
+<section class="contact-form-section">
+  <div class="wrap">
+    <div class="form-head reveal">
+      <div class="eyebrow">Send an enquiry</div>
+      <h2>Tell us what you need.</h2>
+      <p>Fill this in once, then send it by WhatsApp or email, whichever suits you.</p>
+    </div>
+    <form class="cform" id="enquiryForm" novalidate>
+      <div class="full">
+        <label for="enquiryType">Enquiry type</label>
+        <select id="enquiryType" name="enquiryType" required>
+          <option value="General enquiry">General enquiry</option>
+          <option value="Hospitality">Hospitality</option>
+          <option value="Franchise">Franchise</option>
+          <option value="WHS Sauces">WHS Sauces</option>
+          <option value="Ajuni Luxe">Ajuni Luxe</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="cName">Name</label>
+        <input type="text" id="cName" name="name" autocomplete="name" required>
+      </div>
+      <div>
+        <label for="cEmail">Email</label>
+        <input type="email" id="cEmail" name="email" autocomplete="email" required>
+      </div>
+      <div>
+        <label for="cPhone">Phone</label>
+        <input type="tel" id="cPhone" name="phone" autocomplete="tel" inputmode="tel">
+      </div>
+      <div>
+        <label for="cCompany">Company</label>
+        <input type="text" id="cCompany" name="company" autocomplete="organization">
+      </div>
+      <div class="full">
+        <label for="cMessage">Message</label>
+        <textarea id="cMessage" name="message" required></textarea>
+      </div>
+      <p class="form-error full" id="formError" role="alert" hidden>Please add your name, a valid email and a message.</p>
+      <div class="form-actions full">
+        <button type="submit" name="via" value="whatsapp" class="btn btn-primary">Send on WhatsApp</button>
+        <button type="submit" name="via" value="email" class="btn btn-ghost">Send by email</button>
+      </div>
+    </form>
+  </div>
+</section>

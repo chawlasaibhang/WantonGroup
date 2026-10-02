@@ -1,0 +1,67 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:'Fraunces';src:url(../src/assets/fonts/fraunces-normal.woff2);font-weight:300 600}
+@font-face{font-family:'Fraunces';font-style:italic;src:url(../src/assets/fonts/fraunces-italic.woff2);font-weight:500}
+@font-face{font-family:'Manrope';src:url(../src/assets/fonts/manrope-normal.woff2);font-weight:400 700}
+@font-face{font-family:'Cormorant Garamond';src:url(../src/assets/fonts/cormorant-garamond-normal.woff2);font-weight:500 700}
+@font-face{font-family:'Montserrat';src:url(../src/assets/fonts/montserrat-normal.woff2);font-weight:400 700}
+@font-face{font-family:'Playfair Display';src:url(../src/assets/fonts/playfair-display-normal.woff2);font-weight:700 800}
+@font-face{font-family:'Playfair Display';font-style:italic;src:url(../src/assets/fonts/playfair-display-italic.woff2);font-weight:500}
+*{box-sizing:border-box;margin:0}
+body{width:1200px;height:630px;overflow:hidden;font-family:Manrope,sans-serif}
+.card{width:1200px;height:630px;display:none;position:relative;overflow:hidden}
+.card.on{display:flex}
+.eyebrow{font:700 20px/1 Manrope;letter-spacing:.18em;text-transform:uppercase}
+h1{font-family:Fraunces;font-weight:500;letter-spacing:-.01em;line-height:1.05}
+/* group */
+.g{background:#FAF5EA;color:#241F1C;align-items:center;padding:0 80px;gap:60px}
+.g .txt{flex:1}.g .eyebrow{color:#A31F17}
+.g h1{font-size:70px;margin:22px 0 0}.g h1 em{color:#C8291F}
+.g .mark{width:330px;display:flex;flex-direction:column;align-items:center;gap:26px}
+.g .mark img.s{width:190px}.g .mark img.w{width:300px}
+.g .rule{position:absolute;left:80px;right:80px;bottom:50px;border-top:1px solid rgba(36,31,28,.15);padding-top:16px;font:600 18px Manrope;color:#5E5650;display:flex;justify-content:space-between}
+/* photo split */
+.p{background:#2B120D;color:#FAF5EA}
+.p .txt{width:600px;padding:70px 64px;display:flex;flex-direction:column;justify-content:center}
+.p .eyebrow{color:#F3C87F}.p h1{font-size:62px;margin:20px 0 22px}.p p{font-size:22px;color:rgba(250,245,234,.78);line-height:1.45}
+.p .ph{width:600px;height:630px;object-fit:cover}
+.p .shield{position:absolute;left:64px;top:56px;height:56px}
+/* whs */
+.w{background:#F5E8DC;color:#241F1C}
+.w .txt{width:560px;padding:0 64px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.w .mk{font:700 130px/1 'Cormorant Garamond';color:#800500;letter-spacing:.04em}
+.w .by{font:700 22px Montserrat;letter-spacing:.16em;text-transform:uppercase;margin-top:14px}
+.w .since{font:600 18px Montserrat;letter-spacing:.16em;text-transform:uppercase;color:#800500;margin-top:10px}
+.w .prod{font:600 34px/1.2 'Cormorant Garamond';margin-top:34px}
+.w .ph{width:640px;height:630px;object-fit:cover}
+/* ajuni */
+.a{background:radial-gradient(120% 100% at 50% 0%,#14402A,#0C2A18 60%);color:#F3EDE0;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.a::after{content:'';position:absolute;inset:22px;border:1.5px solid rgba(198,150,63,.6);border-radius:10px}
+.a .wm{font:800 110px/1 'Playfair Display';color:#C6963F;letter-spacing:.06em;margin-top:22px}
+.a .by{font:italic 500 34px 'Playfair Display';margin-top:14px}
+.a .tag{font:700 20px Montserrat;letter-spacing:.24em;text-transform:uppercase;color:#E4C989;margin-top:22px}
+.a .cats{font:600 20px Montserrat;letter-spacing:.06em;color:rgba(243,237,224,.82);margin-top:40px}
+</style></head><body>
+
+<div class="card g" id="index"><div class="txt"><div class="eyebrow">Since 1969 · Mumbai</div><h1>A family business, <em>built to carry forward.</em></h1></div>
+<div class="mark"><img class="s" src="../src/assets/img/wanton_shield.png"><img class="w" src="../src/assets/img/wanton_wordmark.png"></div>
+<div class="rule"><span>Hospitality · FMCG · Lifestyle</span><span>wantongroup.com</span></div></div>
+
+<div class="card g" id="about"><div class="txt"><div class="eyebrow">Our story · Since 1969</div><h1>Built by one generation. <em>Carried forward by three.</em></h1></div>
+<div class="mark"><img class="s" style="width:250px" src="../src/assets/img/since_1969.png"></div>
+<div class="rule"><span>Founded by Sardar Darshan Singh Chawla</span><span>wantongroup.com</span></div></div>
+
+<div class="card p" id="hospitality"><div class="txt"><img class="shield" src="../src/assets/img/wanton_shield.png"><div class="eyebrow">Hospitality · Since 1969</div><h1>Wanton House, Hill Road, Bandra</h1><p>And Hotel Wanton House, Vashi. A Wanton Group family business.</p></div><img class="ph" src="../src/assets/img/ext1_web.jpg" style="object-position:50% 60%"></div>
+
+<div class="card w" id="fmcg"><div class="txt"><div class="mk">WHS</div><div class="by">By Wanton House</div><div class="since">• Since 1969 •</div><div class="prod">Original Schezwan Sauce,<br>from our kitchen to yours</div></div><img class="ph" src="../src/assets/img/whs_jar_clean.jpg" style="object-position:40% 50%"></div>
+
+<div class="card a" id="ajuni-luxe"><svg width="110" viewBox="0 0 100 60"><path d="M8 50 L4 20 L24 34 L36 10 L50 26 L64 10 L76 34 L96 20 L92 50 Z" fill="none" stroke="#C6963F" stroke-width="3" stroke-linejoin="round"/><line x1="8" y1="50" x2="92" y2="50" stroke="#C6963F" stroke-width="3"/><circle cx="4" cy="18" r="4" fill="#C6963F"/><circle cx="36" cy="8" r="4" fill="#C6963F"/><circle cx="64" cy="8" r="4" fill="#C6963F"/><circle cx="96" cy="18" r="4" fill="#C6963F"/></svg>
+<div class="wm">AJUNI LUXE</div><div class="by">by Bobby Chawla</div><div class="tag">Gifting solutions</div><div class="cats">Corporate gifts · Home décor · Luxury accessories · Import collections</div></div>
+
+<div class="card g" id="contact"><div class="txt"><div class="eyebrow">Contact · Wanton Group</div><h1>Start a conversation <em>with us.</em></h1></div>
+<div class="mark"><img class="s" src="../src/assets/img/wanton_shield.png"><img class="w" src="../src/assets/img/wanton_wordmark.png"></div>
+<div class="rule"><span>Bandra · Vashi · Dadar, Mumbai</span><span>WhatsApp +91 98679 39177</span></div></div>
+
+<script>const id=location.hash.slice(1);document.getElementById(id).classList.add('on')</script>
+</body></html>
