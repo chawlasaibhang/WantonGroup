@@ -38,6 +38,7 @@ WHATSAPP = {
     "hotel":       (GROUP_WA, "Hi, I'd like to enquire about a stay at Hotel Wanton House, Vashi.\nCheck-in date:\nCheck-out date:\nNumber of guests:"),
     "franchise":   (GROUP_WA, "Hi, I'm interested in a Wanton House franchise.\nName:\nCity / location:\nF&B experience:"),
     "whs":         (GROUP_WA, "Hi, I'd like to know more about WHS Sauces."),
+    "sweetgarlic": (GROUP_WA, "Hi, I'd like to know when WHS Sweet Garlic Sauce is available."),
     "horeca":      (GROUP_WA, "Hi, I'd like to enquire about WHS Sauces 2.5 KG packs for my business.\nBusiness name:\nCity:\nApprox. monthly requirement:"),
     "ajuni":       (AJUNI_WA, "Hi, I'd like to know more about Ajuni Luxe."),
     "gifting":     (AJUNI_WA, "Hi, I'd like to enquire about Ajuni Luxe corporate gifts.\nCompany:\nNumber of gifts:\nNeeded by (date):\nBudget per gift (approx.):"),
@@ -153,12 +154,12 @@ PAGES = {
     "hospitality": dict(
         title="Wanton House, Bandra & Hotel Wanton House, Vashi | Wanton Group",
         desc="Wanton House, the Indian-Chinese restaurant on Hill Road, Bandra West since 1969, and Hotel Wanton House, Vashi. Reserve, stay or enquire about a franchise.",
-        schema=[RESTAURANT, HOTEL], crumb="Hospitality", rg=True,
+        schema=[RESTAURANT, HOTEL], crumb="Hospitality", rg=True, lcp=("ext1_web", "(max-width: 900px) 100vw, 44vw"),
         scripts=['<script src="https://widgets.sociablekit.com/instagram-feed/widget.js" defer></script>']),
     "fmcg": dict(
         title="WHS Sauces by Wanton House | Original Schezwan Sauce",
         desc="WHS Sauces bottles the Schezwan sauce served at Wanton House for over five decades. 500 g jars for home and 2.5 kg packs for hotels, restaurants and caterers.",
-        schema=[WHS_PRODUCT], crumb="FMCG · WHS Sauces", fonts="fonts-whs.css"),
+        schema=[WHS_PRODUCT], crumb="FMCG · WHS Sauces", fonts="fonts-whs.css", lcp=("whs_jar_clean", "(max-width: 900px) 100vw, 46vw")),
     "ajuni-luxe": dict(
         title="Ajuni Luxe | Corporate gifting & luxury lifestyle, Dadar, Mumbai",
         desc="Ajuni Luxe by Bobby Chawla: corporate gifts, home décor, luxury accessories and import collections. Visit us in Dadar West, Mumbai, or enquire on WhatsApp.",
@@ -360,7 +361,7 @@ def main():
     for page, cfg in PAGES.items():
         body = (SRC / "pages" / f"{page}.html").read_text()
         scripts = "\n".join(['<script src="assets/js/main.js" defer></script>'] + cfg.get("scripts", []))
-        doc = (f'<!DOCTYPE html>\n<html lang="en-IN">\n<head>\n{head(page, cfg)}\n</head>\n<body>\n'
+        doc = (f'<!DOCTYPE html>\n<html lang="en-IN">\n<head>\n{head(page, cfg)}\n</head>\n<body class="page-{page}">\n'
                f"{header}\n<main id=\"main\">\n{body}\n</main>\n\n{footer}\n{scripts}\n</body>\n</html>\n")
         (DIST / f"{page}.html").write_text(render(doc, meta, page, cfg))
 

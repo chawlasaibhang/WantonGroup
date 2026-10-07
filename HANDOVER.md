@@ -23,6 +23,14 @@ The site follows one idea: quiet heritage luxury. It's built on Wanton House's
 own details: the 1969 storefront, the "Since 1969" seal, the shield, and the
 carved arches inside the restaurant, which appear as the arch-shaped photo frames.
 
+**Each vertical has its own world**, under the shared Wanton Group header and footer:
+
+- **Hospitality (Wanton House):** "after dark". Lacquer night, lantern gold and the red of the shield; lantern light follows the cursor.
+- **FMCG (WHS Sauces):** cream, deep red and antique gold from the WHS brand sheet. The page leads with the jar, and the range shows Original Schezwan plus a "packaging to follow" card for Sweet Garlic.
+- **Ajuni Luxe:** green and gold from the business card, including its double gold frame. Corporate gifting has its own brief: company, number of gifts, needed by, budget.
+
+Design render boards for Home, About and the three verticals are in `renders/`.
+
 **Interactions.** All of them are subtle, run on a small script with no
 libraries, and switch off for visitors who turn off motion on their device.
 

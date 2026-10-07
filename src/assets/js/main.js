@@ -124,6 +124,18 @@
   window.addEventListener('resize', request);
   tick();
 
+  /* ---- Lantern light follows the pointer (desktop only) ---- */
+  if (finePointer && !reduced) {
+    document.querySelectorAll('[data-glow]').forEach(function (el) {
+      var glow = el.querySelector('.wh-glow') || el;
+      el.addEventListener('pointermove', function (e) {
+        var r = el.getBoundingClientRect();
+        glow.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+        glow.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+      });
+    });
+  }
+
   /* ---- Gentle tilt toward the pointer (desktop only) ---- */
   if (finePointer && !reduced) {
     document.querySelectorAll('[data-tilt]').forEach(function (el) {
