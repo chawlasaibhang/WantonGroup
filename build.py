@@ -139,11 +139,13 @@ WHS_PRODUCT = {
 }
 WEBSITE = {"@type": "WebSite", "@id": BASE_URL + "#website", "url": BASE_URL, "name": "Wanton Group", "publisher": {"@id": ORG_ID}, "inLanguage": "en-IN"}
 
+META = {}
+
 PAGES = {
     "index": dict(
         title="Wanton Group | Family business since 1969 · Bandra, Mumbai",
         desc="Founded in 1969 with Wanton House on Hill Road, Bandra. Three generations on, Wanton Group runs hospitality, WHS Sauces and Ajuni Luxe in Mumbai.",
-        schema=[ORGANIZATION, WEBSITE], rg=True),
+        schema=[ORGANIZATION, WEBSITE], rg=True, signoff=True, lcp=("ext1_web", "(max-width: 900px) 100vw, 46vw")),
     "about": dict(
         title="About Wanton Group | Three generations since 1969",
         desc="The story of Wanton Group: founded in 1969 by Sardar Darshan Singh Chawla with Wanton House, Hill Road, Bandra, and carried forward by three generations.",
@@ -226,6 +228,9 @@ def picture(meta, key, alt="", sizes="100vw", cls="", eager=""):
 
 
 def render(text, meta, page, cfg):
+    signoff = ('    <div class="footer-signoff">\n      <p>Bandra, since 1969. <em>Still family-run.</em></p>\n'
+               '      <a href="contact.html" class="btn btn-primary">Start a conversation</a>\n    </div>\n') if cfg.get("signoff") else ""
+    text = text.replace("{{signoff}}", signoff)
     text = text.replace("{{rg_badge}}", RG_BADGE)
     text = text.replace("{{year}}", str(datetime.date.today().year))
     text = text.replace("{{float_label}}", cfg.get("float_label", "Chat with Wanton Group on WhatsApp"))
@@ -280,6 +285,10 @@ def head(page, cfg):
         '<link rel="preload" href="assets/fonts/manrope-normal.woff2" as="font" type="font/woff2" crossorigin>',
         '<link rel="stylesheet" href="assets/css/site.css">',
     ]
+    if cfg.get("lcp"):
+        key, sizes = cfg["lcp"]
+        srcset = ", ".join(f"assets/img/{key}-{w}.webp {w}w" for w in META[key]["widths"])
+        lines.append(f'<link rel="preload" as="image" type="image/webp" imagesrcset="{srcset}" imagesizes="{sizes}" fetchpriority="high">')
     if cfg.get("fonts"):
         lines.append(f'<link rel="stylesheet" href="assets/css/{cfg["fonts"]}">')
     if cfg.get("rg"):
@@ -343,6 +352,7 @@ def main():
         (DIST / "assets" / "css" / extra).write_text(minify_css((css_dir / extra).read_text()))
 
     meta = build_images()
+    META.update(meta)
     build_icons()
 
     header = (SRC / "partials" / "header.html").read_text()

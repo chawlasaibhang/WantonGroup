@@ -1,70 +1,135 @@
 <section class="hero">
+  <div class="hero__year" aria-hidden="true" data-parallax="0.18">1969</div>
   <div class="wrap">
-    <div>
-      <div class="eyebrow">Since 1969 · Mumbai</div>
+    <div class="hero__text">
+      <div class="eyebrow">Since 1969 · Hill Road, Bandra</div>
       <h1>A family business, <em>built to carry forward.</em></h1>
       <p class="lead">Wanton Group began in 1969 with Sardar Darshan Singh Chawla and Wanton House on Hill Road, Bandra. Three generations later, the family continues to build across hospitality, food products and lifestyle, guided by the values with which it began.</p>
       <div class="hero-ctas">
         <a href="hospitality.html" class="btn btn-primary">Explore hospitality</a>
         <a href="about.html" class="btn btn-ghost">Discover our story</a>
       </div>
+      <a href="#ventures" class="scroll-cue"><i aria-hidden="true"></i>Three ventures, one family</a>
     </div>
-    <div class="lantern-frame">
-      <div class="mark-ring"></div>
-      {{pic:wanton_shield||(max-width: 860px) 95px, 170px|shield-img|eager}}
-      {{pic:wanton_wordmark||(max-width: 860px) 157px, 280px|wordmark-img|eager}}
-    </div>
+    <figure class="hero__media">
+      <div class="arch">
+        {{pic:ext1_web|The Wanton House storefront on Hill Road, Bandra West, with its striped awning|(max-width: 900px) 100vw, 46vw||eager}}
+      </div>
+      <div class="hero__seal" data-spin="24">{{pic:since_1969||142px}}</div>
+      <figcaption>Wanton House, Hill Road, Bandra West</figcaption>
+    </figure>
   </div>
 </section>
 
-<div class="divider" aria-hidden="true">&#10022;</div>
+<div class="ledger">
+  <ul class="wrap">
+    <li>Est. 1969, Bandra</li>
+    <li>Third generation</li>
+    <li>Hospitality</li>
+    <li>FMCG</li>
+    <li>Lifestyle</li>
+  </ul>
+</div>
 
-<section class="verticals">
+<section class="statement" aria-label="Our story in one line">
   <div class="wrap">
-    <div class="verticals-head reveal">
-      <div class="eyebrow">From one restaurant to a family of businesses</div>
-      <h2>One house, three doors in.</h2>
-    </div>
-    <div class="fan">
-      <div class="wing hospitality reveal">
-        <div class="num">Hospitality</div>
-        <h3>Built around the experience of hospitality</h3>
-        <p>Wanton House remains the foundation of the group, alongside our hotel business in Vashi.</p>
-        <a href="hospitality.html" class="arrow">Explore hospitality</a>
+    <p data-words>From one restaurant on Hill Road to a family of businesses, <em>guided by the values with which it began.</em></p>
+    <span class="sign">Wanton Group · Mumbai</span>
+  </div>
+</section>
+
+<section class="doors" id="ventures" aria-labelledby="doors-title">
+  <div class="wrap">
+    <div class="doors__head reveal">
+      <div>
+        <div class="eyebrow">From one restaurant to a family of businesses</div>
+        <h2 id="doors-title">One house, three doors in.</h2>
       </div>
-      <div class="wing fmcg reveal">
-        <div class="num">FMCG</div>
-        <h3>Restaurant recipes, bottled</h3>
-        <p>WHS Sauces takes proprietary recipes developed at Wanton House beyond the restaurant, bringing its sauces and condiments to homes and professional kitchens.</p>
-        <a href="fmcg.html" class="arrow">Explore WHS Sauces</a>
-      </div>
-      <div class="wing ajuni reveal">
-        <div class="num">Lifestyle</div>
-        <h3>Thoughtful products, carefully chosen</h3>
-        <p>Ajuni Luxe brings together corporate gifting, home décor, luxury accessories and import collections under one lifestyle brand.</p>
-        <a href="ajuni-luxe.html" class="arrow">Explore Ajuni Luxe</a>
-      </div>
+      <p>Wanton House is where the story began. WHS Sauces carries its recipes beyond the restaurant. Ajuni Luxe extends the family into gifting and lifestyle.</p>
     </div>
-    <div class="rg-row reveal">
-      {{rg_badge}}
+    <div class="doors__grid" data-stagger>
+      <a class="door reveal" href="hospitality.html">
+        <div class="door__frame">{{pic:int1_web||(max-width: 900px) 80vw, 30vw}}</div>
+        <div class="door__body">
+          <p class="door__kicker">Hospitality</p>
+          <h3>Built around the experience of hospitality</h3>
+          <p>Wanton House remains the foundation of the group, alongside our hotel business in Vashi.</p>
+          <span class="door__cta">Explore hospitality</span>
+        </div>
+      </a>
+      <a class="door door--whs reveal" href="fmcg.html">
+        <div class="door__frame">{{pic:whs_jar_clean||(max-width: 900px) 80vw, 30vw}}</div>
+        <div class="door__body">
+          <p class="door__kicker">FMCG · WHS Sauces</p>
+          <h3>Restaurant recipes, bottled</h3>
+          <p>WHS Sauces takes proprietary recipes developed at Wanton House beyond the restaurant, to homes and professional kitchens.</p>
+          <span class="door__cta">Explore WHS Sauces</span>
+        </div>
+      </a>
+      <a class="door door--aj reveal" href="ajuni-luxe.html">
+        <div class="door__frame">
+          <svg viewBox="0 0 100 60" aria-hidden="true"><path d="M8 50 L4 20 L24 34 L36 10 L50 26 L64 10 L76 34 L96 20 L92 50 Z" fill="none" stroke="#C6963F" stroke-width="2.5" stroke-linejoin="round"/><line x1="8" y1="50" x2="92" y2="50" stroke="#C6963F" stroke-width="2.5"/><circle cx="4" cy="18" r="3.5" fill="#C6963F"/><circle cx="36" cy="8" r="3.5" fill="#C6963F"/><circle cx="64" cy="8" r="3.5" fill="#C6963F"/><circle cx="96" cy="18" r="3.5" fill="#C6963F"/></svg>
+        </div>
+        <div class="door__body">
+          <p class="door__kicker">Lifestyle · Ajuni Luxe</p>
+          <h3>Thoughtful products, carefully chosen</h3>
+          <p>Ajuni Luxe brings together corporate gifting, home décor, luxury accessories and import collections under one lifestyle brand.</p>
+          <span class="door__cta">Explore Ajuni Luxe</span>
+        </div>
+      </a>
     </div>
+    <p class="doors__hint" aria-hidden="true">Swipe to see all three →</p>
   </div>
 </section>
 
 <section class="heritage">
   <div class="wrap">
     <div class="reveal">
-      <div class="eyebrow">Heritage</div>
+      <div class="eyebrow eyebrow--light">Heritage</div>
       <h2>Three generations. One family vision.</h2>
       <p>From the restaurant founded by Sardar Darshan Singh Chawla in 1969 to the businesses we operate today, the family remains at the centre of Wanton Group.</p>
       <div class="hero-ctas">
         <a href="about.html" class="btn btn-primary">Discover our story</a>
       </div>
     </div>
-    <div class="heritage-stats reveal">
-      <div><strong>1969</strong><span>Founded in Bandra</span></div>
-      <div><strong>3rd</strong><span>Generation run</span></div>
-      <div><strong>3</strong><span>Ventures, one family</span></div>
+    <div class="reveal">
+      <div class="heritage-stats">
+        <div><strong data-count="1969" data-from="1900">1969</strong><span>Founded in Bandra</span></div>
+        <div><strong data-count="3" data-from="1" data-suffix="rd">3rd</strong><span>Generation run</span></div>
+        <div><strong data-count="3" data-from="1">3</strong><span>Ventures, one family</span></div>
+      </div>
+      <div class="rg-row">
+        {{rg_badge}}
+      </div>
     </div>
+  </div>
+</section>
+
+<section class="feature" aria-labelledby="feature-title">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Where it began</div>
+      <h2 id="feature-title">A Bandra institution, built over generations.</h2>
+      <p>Wanton House is the foundation of Wanton Group. Established on Hill Road, Bandra West, in 1969, the restaurant has been part of the family's journey from its very beginning. Its food, recipes and hospitality became the starting point for a business that would eventually grow beyond the restaurant.</p>
+      <a href="hospitality.html#restaurants" class="text-link">Discover Wanton House</a>
+    </div>
+    <figure class="feature__media">
+      <div class="develop">{{pic:int2_web|Inside Wanton House: framed photographs on a stone wall above the booths|(max-width: 900px) 100vw, 50vw}}</div>
+      <div class="feature__inset" data-parallax="-0.06">{{pic:ext1_web|The Wanton House storefront on Hill Road|(max-width: 900px) 45vw, 260px}}</div>
+    </figure>
+  </div>
+</section>
+
+<section class="routes" aria-labelledby="routes-title">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="eyebrow">Work with us</div>
+      <h2 id="routes-title">Start a conversation.</h2>
+    </div>
+    <ul data-stagger>
+      <li class="reveal"><a class="route" href="{{wa:franchise}}" target="_blank" rel="noopener"><strong>Enquire about a franchise</strong><span>Bring Wanton House to a new location.</span><span class="wa"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.5.66 4.83 1.8 6.86L4 29l7.3-1.9a11.9 11.9 0 0 0 4.72.98h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3zm0 22.02c-1.68 0-3.28-.44-4.68-1.28l-.34-.2-4.34 1.13 1.16-4.23-.22-.34a9.95 9.95 0 0 1-1.53-5.08c0-5.5 4.48-9.98 10-9.98s10 4.48 10 9.98-4.48 10-10 10zm5.47-7.48c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15s-.78.98-.96 1.18-.35.22-.65.07a8.18 8.18 0 0 1-2.4-1.48 9 9 0 0 1-1.66-2.06c-.17-.3 0-.46.13-.6.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.65-.94-2.26-.25-.6-.5-.5-.68-.5-.18-.01-.38-.01-.58-.01s-.53.07-.8.37c-.28.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/></svg>WhatsApp · 98679 39177</span></a></li>
+      <li class="reveal"><a class="route" href="{{wa:horeca}}" target="_blank" rel="noopener"><strong>Order WHS for your kitchen</strong><span>Trade, HoReCa and 2.5 KG packs.</span><span class="wa"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.5.66 4.83 1.8 6.86L4 29l7.3-1.9a11.9 11.9 0 0 0 4.72.98h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3zm0 22.02c-1.68 0-3.28-.44-4.68-1.28l-.34-.2-4.34 1.13 1.16-4.23-.22-.34a9.95 9.95 0 0 1-1.53-5.08c0-5.5 4.48-9.98 10-9.98s10 4.48 10 9.98-4.48 10-10 10zm5.47-7.48c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15s-.78.98-.96 1.18-.35.22-.65.07a8.18 8.18 0 0 1-2.4-1.48 9 9 0 0 1-1.66-2.06c-.17-.3 0-.46.13-.6.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.65-.94-2.26-.25-.6-.5-.5-.68-.5-.18-.01-.38-.01-.58-.01s-.53.07-.8.37c-.28.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/></svg>WhatsApp · 98679 39177</span></a></li>
+      <li class="reveal"><a class="route" href="{{wa:gifting}}" target="_blank" rel="noopener"><strong>Plan corporate gifts</strong><span>With Ajuni Luxe, Dadar West.</span><span class="wa"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.02 3C9.4 3 4 8.4 4 15.02c0 2.5.66 4.83 1.8 6.86L4 29l7.3-1.9a11.9 11.9 0 0 0 4.72.98h.01c6.62 0 12.02-5.4 12.02-12.02C28.05 8.4 22.65 3 16.02 3zm0 22.02c-1.68 0-3.28-.44-4.68-1.28l-.34-.2-4.34 1.13 1.16-4.23-.22-.34a9.95 9.95 0 0 1-1.53-5.08c0-5.5 4.48-9.98 10-9.98s10 4.48 10 9.98-4.48 10-10 10zm5.47-7.48c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15s-.78.98-.96 1.18-.35.22-.65.07a8.18 8.18 0 0 1-2.4-1.48 9 9 0 0 1-1.66-2.06c-.17-.3 0-.46.13-.6.13-.13.3-.35.45-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.65-.94-2.26-.25-.6-.5-.5-.68-.5-.18-.01-.38-.01-.58-.01s-.53.07-.8.37c-.28.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/></svg>WhatsApp · 93212 15812</span></a></li>
+    </ul>
   </div>
 </section>

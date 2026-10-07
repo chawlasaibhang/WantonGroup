@@ -17,6 +17,28 @@ unchanged (`index.html`, `about.html`, `hospitality.html`, `fmcg.html`,
 | `brand-reference/` | Logo, brand sheets and the approved copy deck. |
 | `tools/` | Generator for the share images (only needed if you change them). |
 
+## Design (October 2026 redesign)
+
+The site follows one idea: quiet heritage luxury. It's built on Wanton House's
+own details: the 1969 storefront, the "Since 1969" seal, the shield, and the
+carved arches inside the restaurant, which appear as the arch-shaped photo frames.
+
+**Interactions.** All of them are subtle, run on a small script with no
+libraries, and switch off for visitors who turn off motion on their device.
+
+- **Header:** turns solid as you scroll, with a thin gold progress line along its bottom edge.
+- **Seals:** the "Since 1969" seal on Home and About and the WHS seal turn gently as you scroll.
+- **Home:**
+  - The outlined "1969" behind the hero drifts slowly as you scroll.
+  - A one-line statement whose words light up as you read.
+  - Three arched "doors" for the ventures; they lift on hover, and on phones they become a swipeable row.
+  - The heritage numbers (1969, 3rd, 3) count up when they come into view.
+- **Heritage photos:** they arrive in sepia and develop into colour (Home feature and Hospitality).
+- **WHS jar:** tilts slightly toward the cursor on desktop.
+- **Ajuni Luxe:** a gold sheen passes across the wordmark, and the four collection icons draw themselves in.
+- **Mobile menu:** full-screen, with large serif links and a WhatsApp button.
+- **Page changes:** a soft cross-fade in browsers that support it.
+
 ## What changed
 
 **Search and sharing**
@@ -65,21 +87,20 @@ unchanged (`index.html`, `about.html`, `hospitality.html`, `fmcg.html`,
 
 Order: Performance / Accessibility / Best practices / SEO
 
-| Page | Before | After |
+| Page | Before (old live site) | After (redesign) |
 |---|---|---|
-| Home | 91 / 93 / 93 / 91 | 93 / 100 / 93 / 100 |
-| About | 88 / 93 / 93 / 91 | 98 / 100 / 96 / 100 |
-| Hospitality | 66 / 93 / 93 / 91 | 93 / 100 / 93 / 100 |
-| FMCG | 87 / 93 / 93 / 91 | 97 / 100 / 96 / 100 |
-| Ajuni Luxe | 96 / 93 / 93 / 91 | 96 / 100 / 93 / 100 |
-| Contact | 95 / 94 / 93 / 91 | 99 / 100 / 96 / 100 |
+| Home | 91 / 93 / 93 / 91 | 91 / 100 / 96 / 100 |
+| About | 88 / 93 / 93 / 91 | 97 / 100 / 100 / 100 |
+| Hospitality | 66 / 93 / 93 / 91 | 93 / 100 / 96 / 100 |
+| FMCG | 87 / 93 / 93 / 91 | 94 / 100 / 100 / 100 |
+| Ajuni Luxe | 96 / 93 / 93 / 91 | 93 / 100 / 96 / 100 |
+| Contact | 95 / 94 / 93 / 91 | 98 / 100 / 100 / 100 |
 
 Desktop is 100 for Performance, Accessibility and SEO on every page.
 
 These were measured on a local test server. In that test environment the three
 third-party embeds (Restaurant Guru, the SociableKit and Elfsight Instagram
-feeds) were blocked. They are what keep Best practices at 93 on the pages that
-use them, and the live numbers will differ slightly.
+feeds) were blocked, so live numbers will differ slightly.
 
 ## How to upload
 
