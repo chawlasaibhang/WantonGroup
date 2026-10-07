@@ -135,7 +135,7 @@ AJUNI = {
 }
 WHS_PRODUCT = {
     "@type": "Product", "name": "WHS Original Schezwan Sauce", "image": BASE_URL + "assets/img/whs_jar_clean.jpg",
-    "description": "Schezwan sauce developed and served at Wanton House for over five decades, crafted in small batches. 500 g retail jar; 2.5 kg packs for professional kitchens.",
+    "description": "Schezwan sauce from Wanton House, to a recipe unchanged for over five decades. No added preservatives, no artificial colours, made only in refined sunflower oil. 500 g retail jar; 2.5 kg packs for professional kitchens.",
     "brand": {"@type": "Brand", "name": "WHS Sauces"}, "manufacturer": {"@id": ORG_ID},
 }
 WEBSITE = {"@type": "WebSite", "@id": BASE_URL + "#website", "url": BASE_URL, "name": "Wanton Group", "publisher": {"@id": ORG_ID}, "inLanguage": "en-IN"}
@@ -157,8 +157,8 @@ PAGES = {
         schema=[RESTAURANT, HOTEL], crumb="Hospitality", rg=True, lcp=("ext1_web", "(max-width: 900px) 100vw, 44vw"),
         scripts=['<script src="https://widgets.sociablekit.com/instagram-feed/widget.js" defer></script>']),
     "fmcg": dict(
-        title="WHS Sauces by Wanton House | Original Schezwan Sauce",
-        desc="WHS Sauces bottles the Schezwan sauce served at Wanton House for over five decades. 500 g jars for home and 2.5 kg packs for hotels, restaurants and caterers.",
+        title="WHS Sauces by Wanton House | From our kitchen, to yours",
+        desc="Wanton House recipes, unchanged for five decades. No added preservatives, no artificial colours, made only in refined sunflower oil. 500 g jars and 2.5 kg packs.",
         schema=[WHS_PRODUCT], crumb="FMCG · WHS Sauces", fonts="fonts-whs.css", lcp=("whs_jar_clean", "(max-width: 900px) 100vw, 46vw")),
     "ajuni-luxe": dict(
         title="Ajuni Luxe | Corporate gifting & luxury lifestyle, Dadar, Mumbai",

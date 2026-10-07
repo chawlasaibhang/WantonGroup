@@ -714,3 +714,21 @@ html.menu-open .whatsapp-float{opacity:0; pointer-events:none}
 
 /* Pages that open on a dark world keep a solid header */
 .page-hospitality .site-header, .page-ajuni-luxe .site-header{background:rgba(247,241,230,.97)}
+
+/* WHS: what goes into every jar */
+.whs-promise{border-block:1px solid rgba(128,5,0,.14); background:#FBF4EC}
+.whs-promise__grid{display:grid; grid-template-columns:repeat(4,1fr)}
+.whs-promise__grid li{display:flex; flex-direction:column; gap:8px; padding:36px 28px; color:#5E554E; font-size:.875rem}
+.whs-promise__grid li + li{border-left:1px solid rgba(128,5,0,.14)}
+.whs-promise__grid svg{width:36px; height:36px; color:var(--whs-red); margin-bottom:8px; transition:transform .6s var(--ease)}
+.whs-promise__grid li:hover svg{transform:rotate(-8deg) scale(1.06)}
+.whs-promise__grid strong{font:600 1.5rem/1.15 'Cormorant Garamond', serif; color:var(--whs-ink)}
+@media (max-width:900px){
+  .whs-promise__grid{grid-template-columns:1fr 1fr}
+  .whs-promise__grid li:nth-child(3){border-left:0}
+  .whs-promise__grid li:nth-child(n+3){border-top:1px solid rgba(128,5,0,.14)}
+}
+@media (max-width:520px){
+  .whs-promise__grid{grid-template-columns:1fr}
+  .whs-promise__grid li + li{border-left:0; border-top:1px solid rgba(128,5,0,.14)}
+}
